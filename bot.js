@@ -36,3 +36,4 @@
     }
     return trans;
 }
+alert("thanks for using my basics 1 bot");
