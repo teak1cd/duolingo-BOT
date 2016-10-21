@@ -22,10 +22,10 @@ window.l = function(s){
     for(var i = 0;i<t.length;i++){
         if(typeof s !== "undefined"){
             var j = words[t[i]];
-            if(t[i] === "soy" && t[i+1]==="un") j = "i am";
+            if(t[i] === "soy" && t[i+1]==="un") j = "i am ";
         }else{
             var j = words[t[i].innerHTML.toLowerCase()];
-            if(t[i].innerHTML.toLowerCase()==="soy" &&t[i+1].innerHTML.toLowerCase()==="un") j = "i am";
+            if(t[i].innerHTML.toLowerCase()==="soy" &&t[i+1].innerHTML.toLowerCase()==="un") j = "i am ";
         }
         if(typeof j === "undefined") j = " ";
         trans+=j
