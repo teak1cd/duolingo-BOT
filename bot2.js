@@ -34,7 +34,8 @@ window.l = function(s){
     }
     return trans;
 }
-alert("thanks for using my basics 1 bot");
+window.g();
 }catch(e){consome.log(e);setTimeout(f,500);}
 }
 f();
+alert("thanks for using my basics 1 bot");
