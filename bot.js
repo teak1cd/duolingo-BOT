@@ -57,6 +57,7 @@ function l(s){
     if(typeof s !== "undefined")s.split(" ");
     if(typeof s === "undefined")document.getElementsByClassName("non-space");
     var trans = "";
+    console.log(s);
     for(var i = 0;i<t.length;i++){
         if(typeof s !== "undefined"){
             var j = words[t[i]];
