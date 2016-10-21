@@ -55,7 +55,7 @@ var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"i am "
 function l(s){
     var t ="" 
     if(typeof s !== "undefined")s.split(" ");
-    if(typeof s === "undefined")document.getElementsByClassName("non-space");
+    if(typeof s === "undefined")s=document.getElementsByClassName("non-space");
     var trans = "";
     console.log(s);
     for(var i = 0;i<t.length;i++){
