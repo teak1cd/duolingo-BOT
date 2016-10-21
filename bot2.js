@@ -30,6 +30,7 @@ window.l = function(s){
         if(typeof j === "undefined") j = " ";
         trans+=j
     }
+    if(trans === "un niña ")trans = "una niña";
     if(typeof s === "undefined"){
         document.getElementById("text-input").value = trans;
     }else{
