@@ -1,9 +1,10 @@
-var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña ","yo":"i ","i":"yo ","soy":"am ","am":"soy ","come":"eats ","eats":"come ","apple":"manzana ","manzana":"apple","she":"ella ","ella":"she ","es":"is ","is":"es ","él":"he ","he":"él ","manzanas":"apples","apples":"manzanas"};
+var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña ","yo":"i ","i":"yo ","soy":"am ","am":"soy ","come":"eats ","eats":"come ","apple":"manzana ","manzana":"apple","she":"ella ","ella":"she ","es":"is ","is":"es ","él":"he ","he":"él ","manzanas":"apples","apples":"manzanas","bread":"pan ","pan":"bread ","agua":"water ","water":"agua ","leche":"milk ","milk":"leche ","bebo":"drink ","drink":"bebo ","tú":"you ","comes":"eat ","eat":"comes ","como":"eat ","bebes":"drink ","bebe":"drink ","usted":"you ","segura":"safe ","safe":"segura "};
 var exeptions = [
-    ["soy","un","i am "],
+    ["soy","un","i am a "],
     ["usted","es","you are "],
     ["tú","eres","you are "],
-    ["the","woman","la mujer "]
+    ["the","woman","la mujer "],
+    ["it","is","es "]
 ];
 function f(){
 try{
@@ -47,6 +48,7 @@ window.l = function(s){
         trans+=j
     }
     if(trans === "un niña ")trans = "una niña";//
+    trans = trans.replace(/i i/gm,"i");
     if(typeof s === "undefined"){
         document.getElementById("text-input").value = trans;
     }else{
@@ -58,4 +60,4 @@ g();
 }catch(e){consome.log(e);setTimeout(f,500);}
 }
 f();
-alert("thanks for using my basics 1 bot");
+alert("thanks for using my basics 1 bot\nbot by teak1cd");
