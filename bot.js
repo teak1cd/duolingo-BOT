@@ -1,4 +1,4 @@
-
+try{
 //     function g(){
         
 //          window.requestAnimationFrame(g);
@@ -54,13 +54,13 @@
     }
     var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"i am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ",
                 "a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña "};
-    function l(g){
+    function l(s){
     var t ="" 
-    if(typeof g !== "undefined")g.split(" ");
-    if(typeof g === "undefined") t = g || document.getElementsByClassName("non-space");
+    if(typeof s !== "undefined")s.split(" ");
+    if(typeof s === "undefined")document.getElementsByClassName("non-space");
     var trans = "";
     for(var i = 0;i<t.length;i++){
-        if(typeof g !== "undefined"){
+        if(typeof s !== "undefined"){
             var j = words[t[i]];
         }else{
             var j = words[t[i].innerHTML.toLowerCase()];
@@ -68,7 +68,7 @@
         if(typeof j === "undefined") j = " ";
         trans+=j
     }
-    if(typeof g === "undefined"){
+    if(typeof s === "undefined"){
         document.getElementById("text-input").value = trans;
     }else{
         trans+=";";
@@ -76,3 +76,4 @@
     return trans;
 }
 alert("thanks for using my basics 1 bot");
+}catch(e){alert(e)'}
