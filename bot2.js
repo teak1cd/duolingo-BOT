@@ -1,4 +1,4 @@
-var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"i am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña ","yo":"i ","i":"yo ","soy":"am ","am":"soy "};
+var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña ","yo":"i ","i":"yo ","soy":"am ","am":"soy "};
 function f(){
 try{
 window.g = function(){        
@@ -10,6 +10,7 @@ window.g = function(){
             var k = document.getElementsByClassName("player")[2].innerHTML.split("“");
             k[1] = k[1].substring(0, k[1].length - 1);
             var t = window.l(k[1]).replace(/ ;/g,"");
+            document.getElementsByClassName("player")[2].innerHTML = t;
         }
     }catch(e){}
 }
@@ -34,7 +35,7 @@ window.l = function(s){
     }
     return trans;
 }
-window.g();
+g();
 }catch(e){consome.log(e);setTimeout(f,500);}
 }
 f();
