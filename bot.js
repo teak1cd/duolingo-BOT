@@ -38,10 +38,9 @@ try{
 // }
 // alert("thanks for using my basics 1 bot");
 
-    function g(){
-        
-         window.requestAnimationFrame(g);
-        try{
+function g(){        
+    window.requestAnimationFrame(g);
+    try{
         if(document.getElementsByClassName("player")[2].innerHTML==="Translate this text"){
             l();
         }else{
@@ -50,11 +49,10 @@ try{
             var t = l(k[1]).replace(/ ;/g,"");
             console.log(t);
         }
-        }catch(e){}
-    }
-    var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"i am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ",
-                "a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña "};
-    function l(s){
+    }catch(e){}
+}
+var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"i am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña "};
+function l(s){
     var t ="" 
     if(typeof s !== "undefined")s.split(" ");
     if(typeof s === "undefined")document.getElementsByClassName("non-space");
@@ -76,4 +74,4 @@ try{
     return trans;
 }
 alert("thanks for using my basics 1 bot");
-}catch(e){alert(e)'}
+}catch(e){alert(e);}
