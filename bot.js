@@ -13,8 +13,8 @@
         }
         }catch(e){}
     }
-    var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"i am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ",
-                "a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña "};
+    var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"i am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","manzanas":"apples ","apples":"manzanas ",
+                "a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña ","come":"eat ","eat":"come ","es":"is ","is":"es ","él":"he ","he":"él ","usted":"you ","you":"usted ","tú":"you ","eres":"are ","are":"eres "};
     function l(g){
     var t ="" 
     if(typeof g !== "undefined")g.split(" ");
