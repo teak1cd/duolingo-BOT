@@ -4,7 +4,8 @@ var exeptions = [
     ["usted","es","you are "],
     ["tú","eres","you are "],
     ["the","woman","la mujer "],
-    ["it","is","es "]
+    ["it","is","es "],
+    ["ustes","come","you eat"]
 ];
 function f(){
 try{
