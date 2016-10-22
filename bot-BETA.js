@@ -1,4 +1,4 @@
-var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña ","yo":"i ","i":"yo ","soy":"am ","am":"soy ","come":"eats ","eats":"come ","apple":"manzana ","manzana":"apple ","she":"ella ","ella":"she ","es":"is ","is":"es ","él":"he ","he":"él ","manzanas":"apples ","apples":"manzanas ","bread":"pan ","pan":"bread ","agua":"water ","water":"agua ","leche":"milk ","milk":"leche ","bebo":"drink ","drink":"bebo ","tú":"you ","comes":"eat ","eat":"comes ","como":"eat ","bebes":"drink ","bebe":"drink ","usted":"you ","segura":"safe ","safe":"segura ","nosotras":"we ","somos":"are ","mujeres":"women ","women":"mujeres ","bebemos":"drink ","aqua":"water ","water":"aqua ","nosotros":"we ","hombres":"men ","¿son":"are ","ustedes?":"you?"};
+var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña ","yo":"i ","i":"yo ","soy":"am ","am":"soy ","come":"eats ","eats":"come ","apple":"manzana ","manzana":"apple ","she":"ella ","ella":"she ","es":"is ","is":"es ","él":"he ","he":"él ","manzanas":"apples ","apples":"manzanas ","bread":"pan ","pan":"bread ","agua":"water ","water":"agua ","leche":"milk ","milk":"leche ","bebo":"drink ","drink":"bebo ","tú":"you ","comes":"eat ","eat":"comes ","como":"eat ","bebes":"drink ","bebe":"drink ","usted":"you ","segura":"safe ","safe":"segura ","nosotras":"we ","somos":"are ","mujeres":"women ","women":"mujeres ","bebemos":"drink ","aqua":"water ","water":"aqua ","nosotros":"we ","hombres":"men ","¿son":"are ","ustedes?":"you?","dueño":"owner ","owner":"dueño "};
 var exeptions = [
     ["soy","un","i am a "],
     ["usted","es","you are "],
@@ -6,7 +6,9 @@ var exeptions = [
     ["the","woman","la mujer "],
     ["it","is","es "],
     ["somos","mujeres","we are women"],
-    ["somos","hombres","we are men"]
+    ["somos","hombres","we are men"],
+    ["el","mujer","the woman"],
+    ["the","apple","la manzana"]
 ];
 function f(){
 try{
@@ -28,6 +30,7 @@ window.g = function(){
     try{
         if(document.getElementsByClassName("player")[2].innerHTML==="Translate this text"){
             window.l();
+            /*
             var e = new Event("keydown");
             e.key="a";    // just enter the char you want to send 
             e.keyCode=e.key.charCodeAt(0);
@@ -38,6 +41,24 @@ window.g = function(){
             e.metaKey=false;
             e.bubbles=true;
             document.dispatchEvent(e);
+           */
+            var keyboardEvent = document.createEvent("KeyboardEvent");
+            var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+
+
+            keyboardEvent[initMethod](
+                   "keydown", // event type : keydown, keyup, keypress
+                    true, // bubbles
+                    true, // cancelable
+                    window, // viewArg: should be window
+                    false, // ctrlKeyArg
+                    false, // altKeyArg
+                    false, // shiftKeyArg
+                    false, // metaKeyArg
+                    40, // keyCodeArg : unsigned long the virtual key code, else 0
+                    0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
+            );
+            document.dispatchEvent(keyboardEvent);
             simulateClick(document.getElementById("next_button"));
             simulateClick(document.getElementById("next_button"));
         }else{
@@ -50,7 +71,7 @@ window.g = function(){
             try{
             for(var i = 0;i<3;i++){
                 for(var j = 0;j<_h[i].innerHTML.length;j++){
-                    if(_h[i].innerHTML[j]===t[i][j]){
+                    if(_h[i].innerHTML[j]===t[j]){
                         c[i]++;
                     }
                 }
@@ -59,10 +80,11 @@ window.g = function(){
             }
             var s = 0;
             var __g = 0;
-            if(c[0] > s){ s = c[0];__g=1;}
-            if(c[1] > s){ s = c[1];__g=2;}
-            if(c[2] > s){ s = c[2];__g=3;}
+            if(c[0] > s && c[0] > 2){ s = c[0];__g=1;}
+            if(c[1] > s && c[1] > 2){ s = c[1];__g=2;}
+            if(c[2] > s && c[2] > 2){ s = c[2];__g=3;}
             console.log(__g);
+            console.log(c);
             simulateClick(document.getElementById("option-"+__g));
             simulateClick(document.getElementById("next_button"));
             simulateClick(document.getElementById("next_button"));
