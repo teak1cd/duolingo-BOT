@@ -8,7 +8,8 @@ var exeptions = [
     ["somos","mujeres","we are women"],
     ["somos","hombres","we are men"],
     ["el","mujer","the woman"],
-    ["the","apple","la manzana"]
+    ["the","apple","la manzana"],
+    ["ustes","come","you eat"]
 ];
 function f(){
 try{
