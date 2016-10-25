@@ -1,4 +1,5 @@
 var words = {"un":"a ","hombre":"man ","una":"a ","mujer":"woman ","soy":"am ","el":"the ","niño":"boy ","la":"the ","niña":"girl ","a":"un ","man":"hombre ","a":"un ","woman":"mujer ","boy":"nino ","the":"el ","girl":"niña ","yo":"i ","i":"yo ","soy":"am ","am":"soy ","come":"eats ","eats":"come ","apple":"manzana ","manzana":"apple ","she":"ella ","ella":"she ","es":"is ","is":"es ","él":"he ","he":"él ","manzanas":"apples ","apples":"manzanas ","bread":"pan ","pan":"bread ","agua":"water ","water":"agua ","leche":"milk ","milk":"leche ","bebo":"drink ","drink":"bebo ","tú":"you ","comes":"eat ","eat":"comes ","como":"eat ","bebes":"drink ","bebe":"drink ","usted":"you ","segura":"safe ","safe":"segura ","nosotras":"we ","somos":"are ","mujeres":"women ","women":"mujeres ","bebemos":"drink ","aqua":"water ","water":"aqua ","nosotros":"we ","hombres":"men ","¿son":"are ","ustedes?":"you?","dueño":"owner ","owner":"dueño "};
+var mf = {"un":true,"hombre":true,"una":false,"mujer":true,"el":true,"niño":true,"la":false,"niña":false,"manzana":false,"nosotras":false,"nosotros":true,"mujeres":false,"hombres":true};
 var exeptions = [
     ["soy","un","i am a "],
     ["usted","es","you are "],
@@ -11,6 +12,19 @@ var exeptions = [
     ["the","apple","la manzana"],
     ["ustes","come","you eat"]
 ];
+window.mfp = function(wor){
+  if(mf[wor]){
+    switch(wor){
+      case "el":
+        return "la";
+      break;
+      case "un":
+        return "una";
+      break;
+    }
+  }
+  return wor;
+}
 function f(){
 try{
     window.simulateClick = function(control)
@@ -110,6 +124,10 @@ window.l = function(s){
             }
         }
         if(typeof j === "undefined") j = " ";
+        var __q = trans.split(" ");
+        if(!mf[(__q[j-1]] && mf[__q[j]]){
+          var __j = mfp(__q[__q.length]);
+        }
         trans+=j
     }
     if(trans === "un niña ")trans = "una niña";//
