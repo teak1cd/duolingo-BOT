@@ -12,19 +12,6 @@ var exeptions = [
     ["the","apple","la manzana"],
     ["ustes","come","you eat"]
 ];
-window.mfp = function(wor){
-  if(mf[wor]){
-    switch(wor){
-      case "el":
-        return "la";
-      break;
-      case "un":
-        return "una";
-      break;
-    }
-  }
-  return wor;
-}
 function f(){
 try{
     window.simulateClick = function(control)
@@ -39,6 +26,19 @@ try{
         evObj.initMouseEvent('click', true, true, window, 1, 12, 345, 7, 220, false, false, true, false, 0, null );
         control.dispatchEvent(evObj);
     }
+}
+window.mfp = function(wor){
+  if(mf[wor]){
+    switch(wor){
+      case "el":
+        return "la";
+      break;
+      case "un":
+        return "una";
+      break;
+    }
+  }
+  return wor;
 }
 window.g = function(){        
     window.requestAnimationFrame(window.g);
