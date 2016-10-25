@@ -124,10 +124,10 @@ window.l = function(s){
             }
         }
         if(typeof j === "undefined") j = " ";
-        var __q = trans.split(" ");
+        /*var __q = trans.split(" ");
         if(!mf[(__q[j-1]] && mf[__q[j]]){
           var __j = mfp(__q[__q.length]);
-        }
+        }*/
         trans+=j
     }
     if(trans === "un niña ")trans = "una niña";//
