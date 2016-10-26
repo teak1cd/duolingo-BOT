@@ -1,5 +1,8 @@
 (
 function(){
+  function callback(){
+    document.getElementsByTagName("h1")[0].innerHTML = "BOT LOADED";
+  }
   var chk = document.getElementsByTagName("h1")[0].innerHTML;
   var s= document.createElement("script");
   s.src="https://rawgit.com/teak1cd/duolingo-BOT/master/bot-BETA.js";
