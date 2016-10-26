@@ -3,7 +3,7 @@ function(){
   var chk = document.getElementsByTagName("h1")[0].innerHTML;
   var s= document.createElement("script");
   s.src="https://rawgit.com/teak1cd/duolingo-BOT/master/bot-BETA.js";
-  switch(chk"){
+  switch(chk){
     case "Basics 1":
     s.src="https://rawgit.com/teak1cd/duolingo-BOT/master/bot-BETA.js";
     break;
