@@ -45,35 +45,7 @@ window.g = function(){
     try{
         if(document.getElementsByClassName("player")[2].innerHTML==="Translate this text"){
             window.l();
-            /*
-            var e = new Event("keydown");
-            e.key="a";    // just enter the char you want to send 
-            e.keyCode=e.key.charCodeAt(0);
-            e.which=e.keyCode;
-            e.altKey=false;
-            e.ctrlKey=true;
-            e.shiftKey=false;
-            e.metaKey=false;
-            e.bubbles=true;
-            document.dispatchEvent(e);
-           */
-            var keyboardEvent = document.createEvent("KeyboardEvent");
-            var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
-
-
-            keyboardEvent[initMethod](
-                   "keydown", // event type : keydown, keyup, keypress
-                    true, // bubbles
-                    true, // cancelable
-                    window, // viewArg: should be window
-                    false, // ctrlKeyArg
-                    false, // altKeyArg
-                    false, // shiftKeyArg
-                    false, // metaKeyArg
-                    40, // keyCodeArg : unsigned long the virtual key code, else 0
-                    0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
-            );
-            document.dispatchEvent(keyboardEvent);
+            document.getElementById("next_button").disabled = "enabled";
             simulateClick(document.getElementById("next_button"));
             simulateClick(document.getElementById("next_button"));
         }else{
