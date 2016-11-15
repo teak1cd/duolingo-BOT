@@ -10,7 +10,8 @@ var exeptions = [
     ["somos","hombres","we are men"],
     ["el","mujer","the woman"],
     ["the","apple","la manzana"],
-    ["ustes","come","you eat"]
+    ["ustes","come","you eat"],
+    ["usted","come","you eat"]
 ];
 function f(){
 try{
