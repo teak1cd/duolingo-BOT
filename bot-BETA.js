@@ -27,6 +27,10 @@ try{
         control.dispatchEvent(evObj);
     }
 }
+window.sleep = function(delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+      }
 window.mfp = function(wor){
   if(mf[wor]){
     switch(wor){
@@ -41,12 +45,13 @@ window.mfp = function(wor){
   return wor;
 }
 window.g = function(){        
-    window.requestAnimationFrame(window.g);
     try{
         if(document.getElementsByClassName("player")[2].innerHTML==="Translate this text"){
             window.l();
-            document.getElementById("next_button").disabled = "enabled";
+            //document.getElementById("next_button").disabled = "enabled";
+            sleep(50);
             simulateClick(document.getElementById("next_button"));
+            sleep(50);
             simulateClick(document.getElementById("next_button"));
         }else{
             var k = document.getElementsByClassName("player")[2].innerHTML.split("“");
@@ -73,10 +78,13 @@ window.g = function(){
             console.log(__g);
             console.log(c);
             simulateClick(document.getElementById("option-"+__g));
+            sleep(5);
             simulateClick(document.getElementById("next_button"));
+            sleep(5);
             simulateClick(document.getElementById("next_button"));
         }
     }catch(e){}
+    window.requestAnimationFrame(window.g);
 }
 window.l = function(s){
     var t ="" 
