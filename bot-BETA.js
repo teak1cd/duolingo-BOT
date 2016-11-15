@@ -10,8 +10,8 @@ var exeptions = [
     ["somos","hombres","we are men"],
     ["el","mujer","the woman"],
     ["the","apple","la manzana"],
-    ["ustes","come","you eat"],
-    ["usted","come","you eat"]
+    ["ustedes","come","you eat"],
+    ["usted","come","you eat "]
 ];
 function f(){
 try{
@@ -124,4 +124,4 @@ g();
 }catch(e){consome.log(e);setTimeout(f,500);}
 }
 f();
-alert("thanks for using my basics 1 bot\nbot by teak1cd");
+alert("thanks for using my basics 1 bot\nbot by teak1cd\n v1.0.1");
