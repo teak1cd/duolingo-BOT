@@ -13,10 +13,24 @@ var exeptions = [
     ["ustedes","come","you eat"],
     ["usted","come","you eat "]
 ];
+var autoClick = true;
 function f(){
 try{
+    window.noRepeat = function(arr){
+        var output = "";
+        var text = arr.split(" ");
+        for(var i = 0;i<text.length;i++){
+            try{
+                if(text[i-1] !== text[i]){
+                    output+=text[i]+" ";
+                }
+            }catch(e){}
+        }
+        return output;
+    };
     window.simulateClick = function(control)
 {
+    if(!autoClick)return;
     if (document.all)
     {
         control.click();
@@ -112,7 +126,7 @@ window.l = function(s){
         trans+=j
     }
     if(trans === "un niña ")trans = "una niña";//
-    trans = trans.replace(/i i/gm,"i");
+    trans = noRepeat(trans);
     if(typeof s === "undefined"){
         document.getElementById("text-input").value = trans;
     }else{
