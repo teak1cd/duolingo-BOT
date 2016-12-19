@@ -109,6 +109,7 @@ window.l = function(s){
     for(var i = 0;i<t.length;i++){
         if(typeof s !== "undefined"){
             var j = words[t[i]];
+            if(typeof j === "undefined")j = t[i];
             for(var f=0;f<exeptions.length;f++){
                 if(t[i] === exeptions[f][0] && t[i+1]===exeptions[f][1]){ j = exeptions[f][2];i++;}  
             }
