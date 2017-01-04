@@ -139,4 +139,4 @@ g();
 }catch(e){consome.log(e);setTimeout(f,500);}
 }
 f();
-alert("thanks for using my basics 1 bot\nbot by teak1cd\n v1.0.2");
+alert("thanks for using my basics 1 bot\nbot by teak1cd\n v1.0.3");
