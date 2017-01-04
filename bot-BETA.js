@@ -109,7 +109,7 @@ window.l = function(s){
     for(var i = 0;i<t.length;i++){
         if(typeof s !== "undefined"){
             var j = words[t[i]];
-            if(typeof j === "undefined")j = t[i];
+            if(j === undefined)j = t[i];
             for(var f=0;f<exeptions.length;f++){
                 if(t[i] === exeptions[f][0] && t[i+1]===exeptions[f][1]){ j = exeptions[f][2];i++;}  
             }
@@ -119,7 +119,7 @@ window.l = function(s){
                 if(t[i].innerHTML.toLowerCase()===exeptions[f][0] &&t[i+1].innerHTML.toLowerCase()===exeptions[f][1]){ j = exeptions[f][2];i++;}
             }
         }
-        if(typeof j === "undefined") j = " ";
+        if(j === undefined) j = " ";
         /*var __q = trans.split(" ");
         if(!mf[(__q[j-1]] && mf[__q[j]]){
           var __j = mfp(__q[__q.length]);
@@ -139,4 +139,4 @@ g();
 }catch(e){consome.log(e);setTimeout(f,500);}
 }
 f();
-alert("thanks for using my basics 1 bot\nbot by teak1cd\n v1.0.1");
+alert("thanks for using my basics 1 bot\nbot by teak1cd\n v1.0.2");
