@@ -108,13 +108,13 @@ window.l = function(s){
     var trans = "";
     for(var i = 0;i<t.length;i++){
         if(typeof s !== "undefined"){
-            var j = words[t[i]];
+            var j = words[t[i]] || t[i];
             if(j === undefined)j = t[i];
             for(var f=0;f<exeptions.length;f++){
                 if(t[i] === exeptions[f][0] && t[i+1]===exeptions[f][1]){ j = exeptions[f][2];i++;}  
             }
         }else{
-            var j = words[t[i].innerHTML.toLowerCase()];
+            var j = words[t[i].innerHTML.toLowerCase()] || t[i];
             for(var f=0;f<exeptions.length;f++){
                 if(t[i].innerHTML.toLowerCase()===exeptions[f][0] &&t[i+1].innerHTML.toLowerCase()===exeptions[f][1]){ j = exeptions[f][2];i++;}
             }
